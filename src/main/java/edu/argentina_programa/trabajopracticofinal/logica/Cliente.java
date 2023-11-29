@@ -29,7 +29,7 @@ public class Cliente implements Serializable {
     @Column(name = "id_cliente", unique = true)
     private int id;
 
-    @Column(name = "nro_dni", unique = true)
+    @Column(name = "nro_dni", unique = true, nullable = false)
     private int nro_documento;
 
     @Column(name = "nombre", nullable = false)

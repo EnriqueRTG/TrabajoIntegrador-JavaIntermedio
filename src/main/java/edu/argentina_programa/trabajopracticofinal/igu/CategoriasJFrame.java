@@ -333,8 +333,8 @@ public class CategoriasJFrame extends javax.swing.JFrame {
 
         // Asignar los tados de los registros a la tabla
         if (listaCategorias != null) {
-            for (Categoria categoria : listaCategorias) {
-                Object[] objeto = {categoria.getId(), categoria.getDescripcion()};
+            for (Categoria categoriaLista : listaCategorias) {
+                Object[] objeto = {categoriaLista.getId(), categoriaLista.getDescripcion()};
 
                 modeloTabla.addRow(objeto);
 

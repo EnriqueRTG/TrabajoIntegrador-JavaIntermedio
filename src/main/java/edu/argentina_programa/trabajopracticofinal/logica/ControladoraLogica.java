@@ -25,14 +25,14 @@ public class ControladoraLogica {
         nuevoCliente.setEmail(email);
         nuevoCliente.setTelofono(telefono);
 
-        controlPersistencia.crearCliente(nuevoCliente);
+        this.controlPersistencia.crearCliente(nuevoCliente);
     }
 
     public void crearCategoria(String stringDevuelto) {
         Categoria nuevaCategoria = new Categoria();
         nuevaCategoria.setDescripcion(stringDevuelto);
 
-        controlPersistencia.crearCategoria(nuevaCategoria);
+        this.controlPersistencia.crearCategoria(nuevaCategoria);
     }
 
     public void crearTecnico(String apellido, String nombre, String email, String telefono) {
@@ -42,19 +42,19 @@ public class ControladoraLogica {
         nuevoTecnico.setEmail(email);
         nuevoTecnico.setTelefono(telefono);
 
-        controlPersistencia.crearTecnico(nuevoTecnico);
+        this.controlPersistencia.crearTecnico(nuevoTecnico);
     }
 
     public Cliente traerCliente(int id) {
-        return controlPersistencia.traerCliente(id);
+        return this.controlPersistencia.traerCliente(id);
     }
 
     public List<Cliente> traerClientes() {
-        return controlPersistencia.traerClientes();
+        return this.controlPersistencia.traerClientes();
     }
 
     public List<Categoria> traerCategorias() {
-        return controlPersistencia.traerCategorias();
+        return this.controlPersistencia.traerCategorias();
     }
 
     public void editarCliente(Cliente cliente, int nroDocumento, String apellido, String nombre, String direccion, String email, String telefono) {
