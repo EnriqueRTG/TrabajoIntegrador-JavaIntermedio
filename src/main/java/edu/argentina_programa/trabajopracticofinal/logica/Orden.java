@@ -5,9 +5,7 @@
 package edu.argentina_programa.trabajopracticofinal.logica;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.util.Date;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -47,7 +45,7 @@ public class Orden implements Serializable {
     @Column(name = "estado", nullable = false)
     private String estado;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(name = "id_cliente")
     private Cliente cliente;
 
